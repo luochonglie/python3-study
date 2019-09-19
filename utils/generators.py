@@ -15,7 +15,7 @@ def fibonacci(k):
         times += 1
 
 
-def aa():
+def main():
     pass
 
 
