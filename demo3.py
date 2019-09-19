@@ -1,8 +1,8 @@
-import decorator
+from utils import decorators
 
 
-# TODO write commone
-@decorator.time_consuming
+# TODO write common
+@decorators.time_counter
 def function():
     print("a")
 

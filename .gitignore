@@ -8,3 +8,8 @@ build
 
 # PyCharm
 __pycache__
+/.idea/
+
+
+# vscode
+/.vscode/
