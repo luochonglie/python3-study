@@ -1,4 +1,4 @@
-import decorator
+from geek import decorator
 
 
 # TODO write commone

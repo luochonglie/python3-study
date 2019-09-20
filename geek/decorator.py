@@ -11,13 +11,14 @@ def time_consuming(func):
         duration = (end - begin) * 1000
         print(f'{func.__name__} took {duration} ms.')
         return res
+
     return wraper
 
 
 @time_consuming
-def f1():
+def main():
     print("Hello")
 
 
 if __name__ == '__main__':
-    f1()
+    main()
