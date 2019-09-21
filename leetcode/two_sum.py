@@ -2,25 +2,18 @@ from typing import List
 
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        i, j = 0, 0
-        found = False
-        for i in range(len(nums) - 1):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    found = True
-                    break
-            if found:
-                break
+	def twoSum(self, nums: List[int], target: int) -> List[int]:
+		for i1, v1 in enumerate(nums):
+			for i2, v2 in enumerate(nums[i1 + 1:]):
+				if v1 + v2 == target:
+					return [i1, i1 + i2 + 1]
 
-        if found:
-            return [i, j]
-        else:
-            return []
+		return []
 
 
 nums = [1, 3, 7, 8, 9, 5, 2]
-target = 8
+target = 5
 
 s = Solution()
 print(s.twoSum(nums, target))
+
