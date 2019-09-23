@@ -9,8 +9,9 @@ async def crawl_page(url):
 
 
 async def main(url_list):
-    for url in url_list:
-        await crawl_page(url)
+    tasks = [asyncio.create_task(crawl_page(url)) for url in url_list]
+    await asyncio.gather(*tasks)
+
 
 if __name__ == '__main__':
     urls = ['url_1', 'url_2', 'url_3', 'url_4']
