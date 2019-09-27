@@ -1,11 +1,20 @@
-import sys
+import time
+import functools
 import requests
 import concurrent.futures
-import threading
 
-sys.path[0] = '../../'
 
-from geek.decorator import time_consuming
+def time_consuming(func):
+    @functools.wraps(func)
+    def wraper(*args, **kwargs):
+        begin = time.perf_counter()
+        res = func(*args, **kwargs)
+        end = time.perf_counter()
+        duration = end - begin
+        print(f'{func.__name__} took {duration} s.')
+        return res
+
+    return wraper
 
 
 def download_one(url):
