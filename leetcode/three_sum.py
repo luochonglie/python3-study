@@ -1,9 +1,11 @@
 from typing import List
 
 
-# TODO Fix bug [0,0,0]
+# TODO performance issue
 class Solution:
 	def three_sum(self, nums: List[int]) -> List[List[int]]:
+		if len(nums) < 3:
+			return 
 		two_sum_map = {}
 		num_count = {}
 		# caching two sum
@@ -35,7 +37,7 @@ class Solution:
 
 
 def main():
-	nums = [[-1, 0, 1, 2, -1, -4], [0, 0, 0]]
+	nums = [[-1, 0, 1, 2, -1, -4], [0, 0, 0], []]
 	s = Solution()
 	for v in nums:
 		print(s.three_sum(v))
