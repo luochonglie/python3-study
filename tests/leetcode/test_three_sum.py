@@ -35,4 +35,4 @@ class TestSolution(unittest.TestCase):
         s = three_sum.Solution()
 
         for i, nums in enumerate(nums_list):
-            self.assertEqual(results[i], s.three_sum(nums))
+            self.assertEqual(results[i], s.three_sum(nums), msg=f"Input: {nums}")
