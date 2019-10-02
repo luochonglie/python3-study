@@ -1,5 +1,5 @@
 import unittest
-from leetcode import three_sum
+import three_sum
 
 
 class TestSolution(unittest.TestCase):
