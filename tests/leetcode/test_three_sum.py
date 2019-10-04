@@ -31,7 +31,7 @@ class TestSolution(unittest.TestCase):
         ]
 
         results = [
-            [[-4, -2, 6], [-4, 0, 4], [-4, 1, 3], [-4, 2, 2], [-2, -2, 4], [-2, 0, 2]]
+            [[-4, -2, 6], [-4, 0, 4], [-2, -2, 4], [-4, 1, 3], [-4, 2, 2], [-2, 0, 2]]
             , [[-1, -1, 2], [-1, 0, 1]]
             , [[0, 0, 0]]
             , [[0, 0, 0]]
@@ -42,4 +42,8 @@ class TestSolution(unittest.TestCase):
         s = three_sum.Solution()
 
         for i, nums in enumerate(nums_list):
-            self.assertListEqual(results[i], s.three_sum(nums), msg=f"Input: {nums}")
+            self.assertEqual(results[i], s.three_sum(nums), msg=f"Input: {nums}")
+
+
+if __name__ == '__main__':
+    unittest.main()
