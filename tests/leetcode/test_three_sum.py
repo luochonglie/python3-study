@@ -42,7 +42,9 @@ class TestSolution(unittest.TestCase):
         s = three_sum.Solution()
 
         for i, nums in enumerate(nums_list):
-            self.assertEqual(results[i], s.three_sum(nums), msg=f"Input: {nums}")
+            result = s.three_sum(nums)
+            for res in result:
+                self.assertIn(sorted(res), results[i], f'Input: {nums}')
 
 
 if __name__ == '__main__':
