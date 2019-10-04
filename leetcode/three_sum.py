@@ -1,7 +1,7 @@
 from typing import List
 
 
-# TODO fix [-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6]
+# TODO improve performance
 class Solution:
 
     def three_sum(self, nums: List[int]) -> List[List[int]]:
