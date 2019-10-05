@@ -1,20 +1,6 @@
-import time
-import functools
 import requests
 import concurrent.futures
-
-
-def time_consuming(func):
-    @functools.wraps(func)
-    def wraper(*args, **kwargs):
-        begin = time.perf_counter()
-        res = func(*args, **kwargs)
-        end = time.perf_counter()
-        duration = end - begin
-        print(f'{func.__name__} took {duration} s.')
-        return res
-
-    return wraper
+from geek.decorator import time_consuming
 
 
 def download_one(url):
