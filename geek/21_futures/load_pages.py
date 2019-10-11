@@ -1,6 +1,6 @@
 import requests
 import concurrent.futures
-from core.time_this import time_this
+from core.time_utils import time_this
 
 
 def download_one(url):

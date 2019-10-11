@@ -1,6 +1,6 @@
 import time
 import concurrent.futures
-import core.time_this as timetools
+import core.time_utils as timetools
 
 
 def cpu_bound(number):

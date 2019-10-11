@@ -1,6 +1,6 @@
 import asyncio
 import aiohttp
-import core.time_this as decorator
+import core.time_utils as decorator
 
 
 async def load_one(url):
