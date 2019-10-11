@@ -1,6 +1,6 @@
 import requests
 import concurrent.futures
-from geek.decorator import time_consuming
+from core.time_this import time_this
 
 
 def download_one(url):
@@ -8,19 +8,19 @@ def download_one(url):
     print(f'read {len(resp.content)} bytes from {url}')
 
 
-@time_consuming
+@time_this
 def download_all(sites):
     for site in sites:
         download_one(site)
 
 
-@time_consuming
+@time_this
 def download_all_thread(sites):
     with concurrent.futures.ThreadPoolExecutor() as executor:
         executor.map(download_one, sites)
 
 
-@time_consuming
+@time_this
 def download_all_process(sites):
     with concurrent.futures.ProcessPoolExecutor() as executor:
         executor.map(download_one, sites)
