@@ -6,4 +6,4 @@ b = [4, 5, 6]
 a.append(b)
 b.append(a)
 
-objgraph.show_refs([a])
+objgraph.show_refs([a], filename='ref.png')
