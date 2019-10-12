@@ -6,4 +6,6 @@ b = [4, 5, 6]
 a.append(b)
 b.append(a)
 
-objgraph.show_refs([a], filename='ref.png')
+objgraph.show_refs([a], filename='show_refs.png')
+objgraph.show_backrefs([a], filename='show_backrefs.png')
+
