@@ -5,7 +5,8 @@ from typing import List
 # TODO improve performance
 class Solution:
 
-    def three_sum(self, nums: List[int]) -> List[List[int]]:
+    @staticmethod
+    def three_sum(nums: List[int]) -> List[List[int]]:
         ans = []
         counts = {}
         for i in nums:
